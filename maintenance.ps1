@@ -19,4 +19,4 @@ function Send-ToEmail([string]$email, [string]$attachmentpath){
     write-host "Mail Sent" ; 
     $attachment.Dispose();
  }
-Send-ToEmail  -email "EMAIL YOU WANT TO SEND IT TO" -attachmentpath $path;
+Send-ToEmail  -email "RECIPIENT" -attachmentpath $path;
